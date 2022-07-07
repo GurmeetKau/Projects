@@ -1,0 +1,38 @@
+body{
+         background-color: rgb(68, 201, 242);
+         font-family:'Times New Roman', Times, serif;
+}
+.container{
+    height:25vh;
+    width:60vh;
+    border:5px solid yellow;
+    border-radius: 10px;
+    margin:auto;
+    margin-top:167px;
+    padding:10px;
+    background-color: yellow;
+
+}
+.time{
+    display:flex;
+    justify-content: center;
+    font-size: 5.5rem;
+}
+.control{
+    display:flex;
+    justify-content: center;
+    
+}
+.control button{
+    background-color:rgb(68, 201, 242);
+    color:black;
+    margin:7px 23px;
+    padding:5px 11px;
+    font-size: 1.1rem;
+    border-radius: 11px;
+    border-color: rgb(68, 201, 242);
+}
+.control button:hover{
+    background-color: rgb(41, 35, 35);
+    cursor:pointer;
+}

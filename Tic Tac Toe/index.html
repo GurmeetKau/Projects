@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTicTacToe.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+       .nav{
+            background-color:#0a020b;
+            color:white;
+            height:44px;
+            display:flex;
+            align-items: center;  
+
+        }
+        .gameContainer{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            margin-top: 30px;
+            position:relative;
+        }
+        .grid{
+            display:grid;
+            grid-template-rows: repeat(3,10vw);
+            grid-template-columns: repeat(3,10vw);
+
+        }
+    .container{
+            border: 1.4px solid black;
+            font-size:8vw;
+            cursor: pointer;
+            display:flex;
+            justify-content: center;
+        }
+        .container:hover{
+            background-color:rgb(242, 223, 248);
+        }
+        .imgbox img{
+            width:0;
+            transition: width 1s ease-in-out;
+        }
+        .br-0{
+            border-right: 0 ;
+        }
+        .bt-0{
+            border-top: 0;
+        }
+        .bl-0{
+            border-left: 0;
+        }
+        .bb-0{
+            border-bottom: 0;
+        }
+        .gameinfo{
+            padding :0 34px;
+        }
+        .info{
+            font-size: larger;
+        }
+        #reset{
+            margin:14px 34px;
+            padding: 6px 40px;
+            cursor:pointer;
+            background-color: rgb(149, 134, 163);
+            border-radius: 7px;
+            font-weight:bold ;
+        }
+        @media screen and (max-width: 950px) {
+            .gameContainer{
+                flex-wrap:wrap; 
+            }
+            .gameinfo{
+                margin-top : 34px;
+            }
+            .gameinfo h3{
+                font-size: 1 rem;
+            }
+            .grid{
+                grid-template-columns: repeat(3,20vw);
+                grid-template-rows: repeat(3,20vw);
+            }
+       }
+       .line{
+           background-color: rgb(157, 92, 164);
+           width:0;
+           height:3px;
+           position:absolute;
+           transition: width 1s ease-in-out;
+           /* transform: translate(4vw,15vw) rotate(90deg);  */
+       }
+
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <h3>MyTicTacToe.com</h3>
+    </nav>
+    <div class="gameContainer">
+        <div class="grid">
+            <div class="line"></div>
+            <div class="container bt-0 bl-0"><span class="boxText"></span></div>
+            <div class="container bt-0"><span class="boxText"></span></div>
+            <div class="container br-0 bt-0"><span class="boxText"></span></div>
+            <div class="container bl-0"><span class="boxText"></span></div>
+            <div class="container"><span class="boxText"></span></div>
+            <div class="container br-0"><span class="boxText"></span></div>
+            <div class="container bl-0 bb-0"><span class="boxText"></span></div>
+            <div class="container bb-0"><span class="boxText"></span></div>
+            <div class="container bb-0 br-0"><span class="boxText"></span></div>
+        </div>
+        <div class="gameinfo">
+                <h3>
+                    Welcome to Tic Tac MyTicTacToe
+                </h3>
+            <div>
+                <span class="info">Turn For X</span>
+                <button id="reset">reset</button>
+            </div>
+            <div class="imgbox">
+                <img src="win.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
